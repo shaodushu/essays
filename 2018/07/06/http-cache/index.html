@@ -13,11 +13,11 @@
     <link rel="manifest" href="/essays/manifest.json">
     <title>
         
-          Tags - Shaodushu的博客 | Shaodushu&#39;s Blog
+          Http 缓存控制 - Shaodushu的博客 | Shaodushu&#39;s Blog
         
     </title>
 
-    <link rel="canonical" href="https://github.com/shaodushu/essays.git/essays/tags/">
+    <link rel="canonical" href="https://github.com/shaodushu/essays.git/essays/2018/07/06/http-cache/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/essays/css/bootstrap.min.css">
@@ -148,77 +148,182 @@
 
     <!-- Main Content -->
     
-<!-- Page Header -->
-<header class="intro-header" style="background-image: url('/essays/img/tag-bg.jpg')">
+<!-- Image to hack wechat -->
+<!-- <img src="https://github.com/shaodushu/essays.git/essays/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('post-bg-2015.jpg')
+    }
+</style>
+<header class="intro-header" >
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>Tags</h1>
-                    <!--<hr class="small">-->
-                    <span class="subheading">Hey, this is Tags.</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/essays/tags/#笔记" title="笔记">笔记</a>
+                        
+                    </div>
+                    <h1>Http 缓存控制</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by 少读书 on
+                        2018-07-06
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!-- 标签云 -->
-            <div id='tag_cloud' class="tags">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h3 id="HTTP1-0与HTTP1-1的缓存控制"><a href="#HTTP1-0与HTTP1-1的缓存控制" class="headerlink" title="HTTP1.0与HTTP1.1的缓存控制"></a>HTTP1.0与HTTP1.1的缓存控制</h3><blockquote>
+<p>HTTP1.0 通过<code>Expires</code>头部控制，<code>Expires</code>只能通过绝对时间来刷新缓存内容</p>
+</blockquote>
+<blockquote>
+<p>HTTP1.1 增加了<code>Cache-Control</code>头域，相对过期时间<code>max-age</code>,可以通过<code>Etag</code>和<code>Last-Modified</code>判断是否从浏览器加载缓存文件</p>
+</blockquote>
+<h3 id="浏览器请求缓存判断过程"><a href="#浏览器请求缓存判断过程" class="headerlink" title="浏览器请求缓存判断过程"></a>浏览器请求缓存判断过程</h3><p><img src="http-cache/http-cache.png" alt=""> </p>
+<blockquote>
+<p><code>Expires</code> Web服务器表明该实体在什么时候过期<br><code>Etag</code> 对象（比如URL）的标志值<br><code>Last-Modified</code> 服务器设置的对象最后修改时间</p>
+</blockquote>
+
+
+                <hr>
+
                 
-                    <a href="#笔记" title="笔记" rel="2">笔记</a>
+
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/essays/2018/07/05/http-state/" data-toggle="tooltip" data-placement="top" title="Http 常见状态">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                
+
+                
+                <!-- disqus 评论框 start -->
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
+                <!-- disqus 评论框 end -->
+                
+
+            </div>
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/essays/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/essays/tags/#笔记" title="笔记">笔记</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://juejin.im/user/5ad354a96fb9a028ba1fed5b" target="_blank">掘金</a></li>
+                    
+                        <li><a href="https://github.com/shaodushu" target="_blank">Github</a></li>
+                    
+                </ul>
                 
             </div>
-
-            <!-- 标签列表 -->
-
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="笔记">
-                    <span class="tag-text">笔记</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/essays/2018/07/05/http-state/">
-                        <h2 class="post-title">
-                            Http 常见状态
-                        </h2>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/essays/2018/07/06/http-cache/">
-                        <h2 class="post-title">
-                            Http 缓存控制
-                        </h2>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-
 
         </div>
     </div>
-</div>
+</article>
+
+
+
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "essays";
+    var disqus_identifier = "https://github.com/shaodushu/essays.git/2018/07/06/http-cache/";
+    var disqus_url = "https://github.com/shaodushu/essays.git/2018/07/06/http-cache/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
 
 
     <!-- Footer -->
