@@ -90,14 +90,14 @@
 
                         
                         <li>
-                            <a href="/essays/archives/">Archives</a>
+                            <a href="/essays/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/essays/about/">About</a>
+                            <a href="/essays/archives/">Archives</a>
                         </li>
                         
                     
@@ -170,18 +170,55 @@
             <!-- 标签云 -->
             <div id='tag_cloud' class="tags">
                 
-                    <a href="#随笔" title="随笔" rel="1">随笔</a>
-                
-                    <a href="#小程序" title="小程序" rel="1">小程序</a>
-                
                     <a href="#笔记" title="笔记" rel="2">笔记</a>
                 
+                    <a href="#随笔" title="随笔" rel="1">随笔</a>
+                
                     <a href="#算法" title="算法" rel="1">算法</a>
+                
+                    <a href="#小程序" title="小程序" rel="1">小程序</a>
                 
             </div>
 
             <!-- 标签列表 -->
 
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="笔记">
+                    <span class="tag-text">笔记</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/essays/2018/07/06/http-cache/">
+                        <h2 class="post-title">
+                            Http 缓存控制
+                        </h2>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/essays/2018/07/05/http-state/">
+                        <h2 class="post-title">
+                            Http 常见状态
+                        </h2>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
             
             <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="随笔">
@@ -206,65 +243,6 @@
             </div>
             
             <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="小程序">
-                    <span class="tag-text">小程序</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/essays/2018/07/12/wx-share/">
-                        <h2 class="post-title">
-                            小程序(Taro)-分享朋友圈图片
-                        </h2>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="笔记">
-                    <span class="tag-text">笔记</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/essays/2018/07/05/http-state/">
-                        <h2 class="post-title">
-                            Http 常见状态
-                        </h2>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/essays/2018/07/06/http-cache/">
-                        <h2 class="post-title">
-                            Http 缓存控制
-                        </h2>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="算法">
                     <span class="tag-text">算法</span>
                 </span>
@@ -277,6 +255,28 @@
                      <a href="/essays/2018/07/09/netease-school-recruit-2018/">
                         <h2 class="post-title">
                             获得特定数量硬币问题
+                        </h2>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="小程序">
+                    <span class="tag-text">小程序</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/essays/2018/07/19/wx-share/">
+                        <h2 class="post-title">
+                            小程序(Taro)-分享朋友圈图片
                         </h2>
                         
                     </a>
